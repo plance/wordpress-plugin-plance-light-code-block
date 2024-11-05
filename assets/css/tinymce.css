@@ -1,0 +1,7 @@
+.mce-simple-block-code {
+	padding: 10px;
+	color: #ccc;
+	background-color: #333;
+	background-image: url('data:image/svg;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgogIDxwYXRoIHN0eWxlPSJzdHJva2U6IzAwMDtzdHJva2Utd2lkdGg6LjU7c3Ryb2tlLW9wYWNpdHk6LjI1IiBkPSJNIDAsMCA0LDQgTSAwLDQgNCwwIi8+Cjwvc3ZnPgo=');
+	border-radius: 5px;
+}
