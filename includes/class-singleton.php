@@ -2,10 +2,10 @@
 /**
  * Singleton class.
  *
- * @package Plance\Plugin\Simple_Code_Block
+ * @package Plance\Plugin\Light_Code_Block
  */
 
-namespace Plance\Plugin\Simple_Code_Block;
+namespace Plance\Plugin\Light_Code_Block;
 
 defined( 'ABSPATH' ) || exit;
 

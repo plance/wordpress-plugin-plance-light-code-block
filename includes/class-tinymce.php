@@ -2,16 +2,16 @@
 /**
  * Tinymce class.
  *
- * @package Plance\Plugin\Simple_Code_Block
+ * @package Plance\Plugin\Light_Code_Block
  */
 
-namespace Plance\Plugin\Simple_Code_Block;
+namespace Plance\Plugin\Light_Code_Block;
 
 defined( 'ABSPATH' ) || exit;
 
-use const Plance\Plugin\Simple_Code_Block\URL;
-use const Plance\Plugin\Simple_Code_Block\VERSION;
-use Plance\Plugin\Simple_Code_Block\Singleton;
+use const Plance\Plugin\Light_Code_Block\URL;
+use const Plance\Plugin\Light_Code_Block\VERSION;
+use Plance\Plugin\Light_Code_Block\Singleton;
 
 /**
  * Tinymce class.
@@ -46,7 +46,7 @@ class Tinymce {
 	 * @return array
 	 */
 	public function mce_external_plugins( $plugins ) {
-		$plugins['plance_simple_code_block'] = URL . '/assets/js/tinymce.js?v=' . VERSION;
+		$plugins['plance_Light_Code_Block'] = URL . '/assets/js/tinymce.js?v=' . VERSION;
 
 		return $plugins;
 	}
@@ -58,7 +58,7 @@ class Tinymce {
 	 * @return array
 	 */
 	public function mce_buttons( $buttons ) {
-		$buttons[] = 'btn_simple_code_block';
+		$buttons[] = 'btn_Light_Code_Block';
 
 		return $buttons;
 	}

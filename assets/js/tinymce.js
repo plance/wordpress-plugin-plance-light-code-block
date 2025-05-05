@@ -1,12 +1,12 @@
 /**
  * Admin javascript file.
  *
- * @package Plance\Plugin\Simple_Code_Block
+ * @package Plance\Plugin\Light_Code_Block
  */
 
 ( function(){
 	tinymce.PluginManager.add(
-		'plance_simple_code_block',
+		'plance_Light_Code_Block',
 		function( editor, url ) {
 			let blockCodeModal = function( value ) {
 				editor.windowManager.open(
@@ -27,14 +27,14 @@
 							var div       = document.createElement( 'div' );
 							div.innerText = api.data.code;
 
-							editor.selection.setContent( '<pre class="mce-simple-block-code" contenteditable="false">' + div.innerHTML + '</pre>' );
+							editor.selection.setContent( '<pre class="mce-light-code-block" contenteditable="false">' + div.innerHTML + '</pre>' );
 						}
 					}
 				);
 			};
 
 			editor.addButton(
-				'btn_simple_code_block',
+				'btn_Light_Code_Block',
 				{
 					text:   'SC',
 					image:   false,
@@ -47,7 +47,7 @@
 			editor.on(
 				'click',
 				function( e ) {
-					if ( editor.dom.hasClass( e.target, 'mce-simple-block-code' ) ) {
+					if ( editor.dom.hasClass( e.target, 'mce-light-code-block' ) ) {
 						var code = e.target.innerHTML;
 
 						code = code.replace( /&lt;/g, '<' );

@@ -2,14 +2,14 @@
 /**
  * Textdomain class.
  *
- * @package Plance\Plugin\Simple_Code_Block
+ * @package Plance\Plugin\Light_Code_Block
  */
 
-namespace Plance\Plugin\Simple_Code_Block;
+namespace Plance\Plugin\Light_Code_Block;
 
 defined( 'ABSPATH' ) || exit;
 
-use Plance\Plugin\Simple_Code_Block\Singleton;
+use Plance\Plugin\Light_Code_Block\Singleton;
 
 /**
  * Textdomain class.
@@ -23,6 +23,6 @@ class Textdomain {
 	 * @return void
 	 */
 	protected function init() {
-		load_plugin_textdomain( 'plance-simple-code-block', false, '/plance-simple-code-block/languages' );
+		load_plugin_textdomain( 'light-code-block', false, '/light-code-block/languages' );
 	}
 }
