@@ -46,7 +46,7 @@ class Tinymce {
 	 * @return array
 	 */
 	public function mce_external_plugins( $plugins ) {
-		$plugins['plance_Light_Code_Block'] = URL . '/assets/js/tinymce.js?v=' . VERSION;
+		$plugins['plance_light_code_block'] = URL . '/assets/js/tinymce.js?v=' . VERSION;
 
 		return $plugins;
 	}
@@ -58,7 +58,7 @@ class Tinymce {
 	 * @return array
 	 */
 	public function mce_buttons( $buttons ) {
-		$buttons[] = 'btn_Light_Code_Block';
+		$buttons[] = 'btn_light_code_block';
 
 		return $buttons;
 	}

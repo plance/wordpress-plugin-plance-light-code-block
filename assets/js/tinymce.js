@@ -6,12 +6,12 @@
 
 ( function(){
 	tinymce.PluginManager.add(
-		'plance_Light_Code_Block',
+		'plance_light_code_block',
 		function( editor, url ) {
 			let blockCodeModal = function( value ) {
 				editor.windowManager.open(
 					{
-						title:     localizePlanceSimpleCodeBlock.popup_title,
+						title:     ( 'undefined' !== typeof localizePlanceSimpleCodeBlock ? localizePlanceSimpleCodeBlock.popup_title : '' ),
 						minWidth:  800,
 						minHeight: 600,
 						body: [
@@ -27,16 +27,16 @@
 							var div       = document.createElement( 'div' );
 							div.innerText = api.data.code;
 
-							editor.selection.setContent( '<pre class="mce-light-code-block" contenteditable="false">' + div.innerHTML + '</pre>' );
+							editor.selection.setContent( '<pre class="mce-simple-code-block mce-light-code-block" contenteditable="false">' + div.innerHTML + '</pre>' );
 						}
 					}
 				);
 			};
 
 			editor.addButton(
-				'btn_Light_Code_Block',
+				'btn_light_code_block',
 				{
-					text:   'SC',
+					text:   'LC',
 					image:   false,
 					onclick: function( e ) {
 						blockCodeModal();
@@ -47,8 +47,8 @@
 			editor.on(
 				'click',
 				function( e ) {
-					if ( editor.dom.hasClass( e.target, 'mce-light-code-block' ) ) {
-						var code = e.target.innerHTML;
+					if ( editor.dom.hasClass( e.target, 'mce-simple-code-block' ) ) {
+						let code = e.target.innerHTML;
 
 						code = code.replace( /&lt;/g, '<' );
 						code = code.replace( /&gt;/g, '>' );
