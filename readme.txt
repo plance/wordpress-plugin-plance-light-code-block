@@ -32,8 +32,9 @@ How to use:
 == Screenshots ==
 
 1. Example of a code block in the TinyMCE editor.
-2. Window for inserting/editing code.
-3. Example of code block display on the front end.
+2. Window for inserting/editing code (classic version).
+3. Window for inserting/editing code (gutenberg version).
+4. Example of code block display on the front end.
 
 
 == Changelog ==
