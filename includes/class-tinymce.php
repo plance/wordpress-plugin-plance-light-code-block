@@ -9,7 +9,6 @@ namespace Plance\Plugin\Light_Code_Block;
 
 defined( 'ABSPATH' ) || exit;
 
-use const Plance\Plugin\Light_Code_Block\URL;
 use const Plance\Plugin\Light_Code_Block\VERSION;
 use Plance\Plugin\Light_Code_Block\Singleton;
 
@@ -36,7 +35,7 @@ class Tinymce {
 	 * @return void
 	 */
 	public function run() {
-		add_editor_style( URL . '/assets/css/tinymce.css?v=' . VERSION );
+		add_editor_style( PLANCE_PLUGIN_LIGHT_CODE_BLOCK_URL . '/assets/css/tinymce.css?v=' . VERSION );
 	}
 
 	/**
@@ -46,7 +45,7 @@ class Tinymce {
 	 * @return array
 	 */
 	public function mce_external_plugins( $plugins ) {
-		$plugins['plance_light_code_block'] = URL . '/assets/js/tinymce.js?v=' . VERSION;
+		$plugins['plance_light_code_block'] = PLANCE_PLUGIN_LIGHT_CODE_BLOCK_URL . '/assets/js/tinymce.js?v=' . VERSION;
 
 		return $plugins;
 	}

@@ -11,9 +11,9 @@ defined( 'ABSPATH' ) || exit;
 
 
 const PATH    = __DIR__;
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 
-define( __NAMESPACE__ . '\URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
+define( 'PLANCE_PLUGIN_LIGHT_CODE_BLOCK_URL', rtrim( plugin_dir_url( __FILE__ ), '/' ) );
 
 
 /**

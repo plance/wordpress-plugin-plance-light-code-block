@@ -36,6 +36,6 @@ class Assets {
 			'popup_title' => __( 'Light Code Block', 'light-code-block' ),
 		);
 
-		wp_localize_script( 'wp-tinymce', 'localizePlanceSimpleCodeBlock', $translations );
+		wp_localize_script( 'wp-tinymce', 'plancePluginLightCodeBlockLocalize', $translations );
 	}
 }

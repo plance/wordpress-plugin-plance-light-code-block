@@ -11,7 +11,7 @@
 			let blockCodeModal = function( value ) {
 				editor.windowManager.open(
 					{
-						title:     ( 'undefined' !== typeof localizePlanceSimpleCodeBlock ? localizePlanceSimpleCodeBlock.popup_title : '' ),
+						title:     ( 'undefined' !== typeof plancePluginLightCodeBlockLocalize ? plancePluginLightCodeBlockLocalize.popup_title : '' ),
 						minWidth:  800,
 						minHeight: 600,
 						body: [
@@ -27,7 +27,7 @@
 							var div       = document.createElement( 'div' );
 							div.innerText = api.data.code;
 
-							editor.selection.setContent( '<pre class="mce-simple-code-block mce-light-code-block" contenteditable="false">' + div.innerHTML + '</pre>' );
+							editor.selection.setContent( '<pre class="mce-light-code-block mce-simple-block-code" contenteditable="false">' + div.innerHTML + '</pre>' );
 						}
 					}
 				);
@@ -47,7 +47,7 @@
 			editor.on(
 				'click',
 				function( e ) {
-					if ( editor.dom.hasClass( e.target, 'mce-simple-code-block' ) ) {
+					if ( editor.dom.hasClass( e.target, 'mce-light-code-block' ) || editor.dom.hasClass( e.target, 'mce-simple-block-code' ) ) {
 						let code = e.target.innerHTML;
 
 						code = code.replace( /&lt;/g, '<' );
